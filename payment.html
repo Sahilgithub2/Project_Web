@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+            
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .category label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .imgContainer {
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .imgContainer img {
+            left: auto;
+            margin: 10px;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+        }
+
+        .name {
+            color: #6064b6;
+            font-size: 14px;
+        }
+
+        .check {
+            font-size: 20px;
+            color: transparent;
+        }
+
+        input[type="radio"] {
+            position: absolute;
+            left: -9999px;
+        }
+
+        input[type="radio"]:checked + label .check {
+            color: #6064b6;
+        }
+
+        input[type="radio"]:checked + label .imgContainer {
+            background-color: #1e237a;
+        }
+
+        input[type="radio"]:checked + label .imgContainer img {
+            filter: invert(0);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h4>Select a <span style="color: #6064b6">Payment</span> method</h4>
+        </div>
+
+        <form action="#">
+            <input type="radio" name="payment" id="visa">
+            <label for="visa" class="visaMethod">
+                <div class="imgName">
+                    <div class="imgContainer visa">
+                        <img src="https://i.ibb.co/vjQCN4y/Visa-Card.png" alt="VISA">
+                    </div>
+                    <span class="name">VISA</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check"></i></span>
+            </label>
+
+            <input type="radio" name="payment" id="mastercard">
+            <label for="mastercard" class="mastercardMethod">
+                <div class="imgName">
+                    <div class="imgContainer mastercard">
+                        <img src="https://i.ibb.co/vdbBkgT/mastercard.jpg" alt="Mastercard">
+                    </div>
+                    <span class="name">Mastercard</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check"></i></span>
+            </label>
+
+            <input type="radio" name="payment" id="paypal">
+            <label for="paypal" class="paypalMethod">
+                <div class="imgName">
+                    <div class="imgContainer paypal">
+                        <img src="https://1000logos.net/wp-content/uploads/2021/03/Paytm_Logo.jpg" alt="">
+                    </div>
+                    <span class="name">Paytm</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check"></i></span>
+            </label>
+
+            <input type="radio" name="payment" id="AMEX">
+            <label for="AMEX" class="amexMethod">
+                <div class="imgName">
+                    <div class="imgContainer AMEX">
+                        <img src="https://bl-i.thgim.com/public/money-and-banking/nz7hvk/article24801784.ece/alternates/FREE_1200/google-paya" alt="">
+                    </div>
+                    <span class="name">Gpay</span>
+                </div>
+                <span class="check"><i class="fa-solid fa-circle-check"></i></span>
+            </label>
+
+            <div class="category">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
