@@ -23,31 +23,31 @@ let products = [
     {
         id: 2,
         name: 'Air Max 2017 Running Shoes',
-        image: 'shoes2.PNG',
+        image: 'shoes2.png',
         price: 120.99
     },
     {
         id: 3,
         name: 'Phantom GT2 Academy Dynamic Fit MG',
-        image: 'shoes3.PNG',
+        image: 'shoes3.png',
         price: 150.99
     },
     {
         id: 4,
         name: 'Nike Air Max 90G Essential',
-        image: 'shoes4.PNG',
+        image: 'shoes4.png',
         price: 133.79
     },
     {
         id: 5,
         name: 'Air Jordan 95 Essential',
-        image: 'shoes5.PNG',
+        image: 'shoes5.png',
         price: 142.19
     },
     {
         id: 6,
         name: 'Air Max Futura 90 Fit',
-        image: 'shoes6.PNG',
+        image: 'shoes6.png',
         price: 123.49
     },
     {
@@ -59,7 +59,7 @@ let products = [
     {
         id: 8,
         name: 'Air Max System 95G',
-        image: 'shoes8.PNG',
+        image: 'shoes8.png',
         price: 99.99 
         
     }
@@ -70,7 +70,7 @@ function initApp(){
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
-            <img src="/project/image/${value.image}">
+            <img src="image/${value.image}">
             <div class="title">${value.name}</div>
             <div class="price">${value.price.toLocaleString()}</div>
             <button onclick="addToCard(${key})">Add To Cart</button>`;
